@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <!-- 皮肤包颜色设置-->
+    <color name="commonTextColor">#00FF67</color>
+    <color name="commonTextColor1">#acFF21</color>
+</resources>

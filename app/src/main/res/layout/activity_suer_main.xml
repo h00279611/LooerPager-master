@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sob="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<!--    <com.sunofbeaches.looerpager.views.ToolBar-->
+<!--        android:id="@+id/toolBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        app:title="首页"-->
+<!--        app:backgroundColor="@color/colorAccent">-->
+<!--    </com.sunofbeaches.looerpager.views.ToolBar>-->
+
+
+    <com.sunofbeaches.looerpager.views.SobLooperPager
+        android:id="@+id/sob_looper_pager"
+        android:layout_below="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        sob:is_title_show="true"
+        sob:show_pager_count="multi"
+        sob:switch_time="2000" />
+
+      <View
+        android:id="@+id/line"
+        android:layout_below ="@+id/sob_looper_pager"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"></View>
+
+
+    <LinearLayout
+        android:id="@+id/rv_main_lay_out"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/testLongCLickLayout"
+        android:layout_below="@+id/rv_main_lay_out"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:onClick="testLongClickList"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="测试List长按"></Button>
+
+
+            <Button
+                android:id="@+id/testRecyclerViewBtn"
+                android:background="@color/commonTextColor"
+                android:textColor="@color/commonTextColor1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="测试手写RecyclerView"></Button>
+
+            <Button
+                android:id="@+id/qqLogin"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="三方QQ登录"></Button>
+
+
+            <Button
+                android:id="@+id/updateSkin"
+                android:background="@color/commonTextColor"
+                android:textColor="@color/commonTextColor1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="白天/夜间"></Button>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/print"
+            android:background="@color/commonTextColor"
+            android:textColor="@color/commonTextColor1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="进入打印机"></Button>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/testClick2"
+        android:layout_below="@+id/testLongCLickLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+        <Button
+            android:id="@+id/skinDynamic"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="动态换肤"></Button>
+
+        <Button
+            android:id="@+id/skinDefault"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="还原换肤"></Button>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <com.sunofbeaches.looerpager.views.CarView
+        android:id="@+id/carView"
+        android:layout_below="@+id/testLongCLickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.sunofbeaches.looerpager.views.CarView>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_below ="@+id/carView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_launcher_background"
+                sob:layout_behavior="com.sunofbeaches.looerpager.FloatingActionButtonBehavior" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试But"></Button>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

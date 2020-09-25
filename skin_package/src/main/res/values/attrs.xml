@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SkinnableTextView">
+        <attr name="android:background"></attr>
+        <attr name="android:textColor"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SkinnableButton">
+        <attr name="android:background"></attr>
+        <attr name="android:textColor"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SkinnableImageView">
+        <attr name="android:src"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SkinnableLinnerLayout">
+        <attr name="android:background"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SkinnableRelativeLayout">
+        <attr name="android:background"></attr>
+    </declare-styleable>
+
+</resources>

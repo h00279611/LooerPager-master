@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<User>
+    <userId>1</userId>
+    <userName>Steven</userName>
+    <password>@sun123</password>
+    <birthday>2013-12-13T18:24:03.477+08:00</birthday>
+    <money>1000.0</money>
+</User>

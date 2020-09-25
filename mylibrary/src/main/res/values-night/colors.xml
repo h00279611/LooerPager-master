@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--本地内置换肤颜色（夜间) -->
+    <color name="commonTextColor">#3F51B5</color>
+    <color name="commonTextColor1">#000000</color>
+</resources>

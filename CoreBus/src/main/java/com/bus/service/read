@@ -1,0 +1,20 @@
+服务不被杀死解决办法:
+1.在onCreate（）或者onStartComman（）办法中调用startForeground，
+然后可以在onDestroy（）或者其他处所调用stopForeground（boolean removeNotification）
+办法来stop。
+
+2.设置onStartCommand（）的返回值
+
+3.android.intent.action.USER_PRESENT，来启动service
+
+4.提升service IntentFilter的priority
+
+stopSelf()方法的使用注意
+1.   使用Service的stopSelf()方法来停止服务，要注意这是一个父类的方法，
+调用了这个方法之后，服务停止的时间不确定，后面的代码还是会执行，
+并且onDestroy()方法也会执行，下次重新启动服务的时候，
+先调用onCreate(),然后再调用onStart()方法。
+
+android:process=":remote" 
+1.android:process=":remote"，代表在应用程序里，当需要该service时，会自动创建新的进程。
+2.如果是android:process="remote"，没有“:”分号的，则创建全局进程，不同的应用程序共享该进程。

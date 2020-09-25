@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LooerPager</string>
+    <string name="selection" >已选中%s个</string>
+</resources>

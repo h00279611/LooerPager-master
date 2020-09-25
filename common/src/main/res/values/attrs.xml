@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentageRing">
+        <attr name="radius" format="integer">50dp</attr>
+        <attr name="circleBackground" format="color">#0xffafb4db</attr>
+        <attr name="textColor" format="color"></attr>
+        <attr name="ringColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircularRing">
+        <attr name="circleNumber" format="integer"></attr>
+        <attr name="circleWidth" format="integer"></attr>
+        <attr name="roundColor" format="color"></attr>
+        <attr name="circleTextColor" format="color"></attr>
+        <attr name="circleRoundWidth" format="integer"></attr>
+        <attr name="circleTextSize" format="integer"></attr>
+        <attr name="circleColor1" format="color"></attr>
+        <attr name="circleColor2" format="color"></attr>
+        <attr name="circleColor3" format="color"></attr>
+
+    </declare-styleable>
+
+
+
+</resources>

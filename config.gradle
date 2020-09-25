@@ -1,0 +1,43 @@
+//  添加多个自定义属性，可以通过ext
+// 在根目录的gradle中引入该文件后，这样这个文件定义的都可以被其它子模块使用
+
+ext{
+    username ="hk"
+
+    // 生产/开发环境（正式/测试)
+    // false:组件化模式(开发过程中使用：各子模块可以独立运行） true:集成化环境(打包整个项目apk，子模块不可独立运行)
+    isRelease = false
+
+    // 建立Map存储，对象名，Key都可以自定义
+    androidId =[
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
+            minSdkVersion: 28,
+            targetSdkVersion: 29,
+            versionCode: 1,
+            versionName: "1.0"
+    ]
+
+
+    appId =[
+            app: "com.sunofbeaches.looerpager",
+            skin: "com.sunofbeaches.skin"
+
+    ]
+
+
+    // 生产/测试环境URL
+    url =[
+         "debug": "https:11.22.33/debug",
+         "release": "https:11.22.33/release"
+    ]
+
+
+    dependencies =[
+            fileTree : fileTree(dir: 'libs', include: ['*.jar']),
+            appcompat: 'androidx.appcompat:appcompat:1.1.0',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.3'
+    ]
+
+
+}
