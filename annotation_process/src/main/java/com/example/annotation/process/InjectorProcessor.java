@@ -109,6 +109,8 @@ public class InjectorProcessor extends AbstractProcessor {
         }
 
 
+        buffer.append("\tpublic static void inject(android.app.Activity arg) {\n");
+
         for (Map.Entry<Element, List<Element>> entry : elementMap.entrySet()) {
             Element clazz = entry.getKey();
 
@@ -124,8 +126,10 @@ public class InjectorProcessor extends AbstractProcessor {
             //完整类名
             String fullName = clazz.asType().toString();
 
-            buffer.append("\tpublic static void inject(" + fullName + " arg) {\n")
+
+            buffer.append("if(arg instanceof " + fullName +") {\n")
                     .append("\t\t" + fullName + GEN_CLASS_SUFFIX + ".inject(arg);\n")
+                    .append("return;\n")
                     .append("\t}\n");
         }
 

@@ -34,7 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    implementation project(':annotation_process')
+//    annotationProcessor project(':annotation_process')
 
 }
 

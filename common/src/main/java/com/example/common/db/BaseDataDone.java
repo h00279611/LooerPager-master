@@ -151,6 +151,9 @@ public abstract class BaseDataDone<T extends DBModel> implements IBase<T> {
             for (Table.TableAttr tableAttr : attrList) {
                 int columnIndex = cursor.getColumnIndex(tableAttr.getDbAttrName());
                 String value = cursor.getString(columnIndex);
+                if(value == null){
+                    continue;
+                }
 
                 Field field = mClass.getDeclaredField(tableAttr.getFiledName());
                 field.setAccessible(true);
